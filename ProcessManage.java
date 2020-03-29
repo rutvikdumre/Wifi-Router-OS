@@ -1,7 +1,7 @@
 package Process;
 import memory.*;
 import java.util.*;
-public class lab3
+public class ProcessManage
 {
   public static void fcfs(String arr[], int time[],int n)
   {

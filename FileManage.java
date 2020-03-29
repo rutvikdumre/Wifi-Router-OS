@@ -1,6 +1,6 @@
 package files;
 import java.util.*;
-public class lab9
+public class FileManage
 {
   Scanner sc=new Scanner(System.in);
   int n=100,ctr,s;

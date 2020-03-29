@@ -1,7 +1,7 @@
 
 package memory;
 import java.util.*;
-public class lab7
+public class MemoryManage
 {
   static String mem[]={"\nAddress:Partition #1 (size=1)\n","\nAddress:Partition #2(size=100)\n","\nAddress:Partition #3(size=150)\n","\nAddress:Partition #4(size=50)\n","\nAddress:Partition #5(size=25)\n"};
   static int left[]={1,100,150,50,25};

@@ -1,6 +1,6 @@
-import memory.lab7;
-import Process.lab3;
-import files.lab9;
+import memory.MemoryManage;
+import Process.ProcessManage;
+import files.FileManage;
 import java.util.*;
 import java.io.IOException;
 
@@ -44,9 +44,9 @@ class OS extends Device
   {
 
     int ctrf=0;
-    int parg=2;
-    int fargs=3;
-    lab9 fobj=new lab9();
+    int parg=1;
+    int fargs=1;
+    FileManage fobj=new FileManage();
 
     Device[] devices=new Device[10];
     for(int i=0;i<10;i++)
@@ -54,8 +54,8 @@ class OS extends Device
       devices[i]=new Device();
     }
     int ctrdev=0;
-    lab7 mobj=new lab7();
-    lab3 pobj=new lab3();
+    MemoryManage mobj=new MemoryManage();
+    ProcessManage pobj=new ProcessManage();
     Scanner sc=new Scanner(System.in);
     boolean f=true;
     while(f)
@@ -111,7 +111,7 @@ class OS extends Device
                 break;
             case 3:
               System.out.println("---------------Devices-----------");
-              for(int i=0;i<=ctrdev;i++)
+              for(int i=0;i<ctrdev;i++)
               {
                 System.out.println(devices[i].name);
               }

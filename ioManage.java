@@ -1,6 +1,6 @@
 package io;
 import java.util.*;
-public class lab8
+public class ioManage
 {
   static void bubbleSort(int arr[])
   {
