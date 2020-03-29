@@ -263,6 +263,7 @@ class OS extends Device
                 System.out.println("Select Device:");
                 for (int i=0;i<ctrdev;i++)
                 {
+                  if(devices[i].fctr!=0)
                     System.out.println((i+1)+" "+ devices[i].name);
                 }
                 int chd=mobj.input();
@@ -289,6 +290,11 @@ class OS extends Device
                 }
 
 
+              }
+              else
+              {
+                System.out.println("No files saved on the network");
+                break;
               }
             }
             break;
@@ -322,7 +328,7 @@ class OS extends Device
               break;
               case 2:
               System.out.println("1. Best Fit [Default]");
-              System.out.println("2. First Fit");
+              System.out.println("2. Next Fit");
               System.out.println("3. Worst Fit");
               fargs=mobj.input();
               System.out.println("[Changes Applied succesfully]");

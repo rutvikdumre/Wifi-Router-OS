@@ -173,7 +173,7 @@ public class ioManage
   public static void main(String args[])
   {
     int start;
-    lab8 o=new lab8();
+    ioManage o=new ioManage();
     int n=-1;
     while(n<0)
     {

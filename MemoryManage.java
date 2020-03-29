@@ -105,7 +105,7 @@ public class MemoryManage
   public String best(int arr,int n,String mem[],int left[])
   {
 
-    lab7 obj=new lab7();
+    MemoryManage obj=new MemoryManage();
     //obj.bubbleSort(left,mem,p);
     for (int i = 0; i < n-1; i++)
         for (int j = 0; j < n-i-1; j++)
@@ -152,7 +152,7 @@ public class MemoryManage
   }
   public String worst(int arr,int n,String mem[],int left[])
   {
-    lab7 obj=new lab7();
+    MemoryManage obj=new MemoryManage();
     obj.bubbleSort(left,mem,p);
 
       int flag=0,j;

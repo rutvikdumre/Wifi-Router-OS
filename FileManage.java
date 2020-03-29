@@ -199,7 +199,7 @@ void delete()
 
 public static void main(String args[])
 {
-  lab9 o=new lab9();
+  FileManage o=new FileManage();
   o.ins();
   o.delete();
 }
