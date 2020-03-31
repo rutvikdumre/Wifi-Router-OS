@@ -16,6 +16,15 @@ class Device
 
 class OS extends Device
 {
+  static int search(String arr[],String x)
+{
+  for(int i=0;i<arr.length;i++)
+  {
+    if(x.equals(arr[i]))
+      return i;
+  }
+  return -1;
+}
 
   static int search(Device arr[], String x)
   {
@@ -42,7 +51,7 @@ class OS extends Device
   }
   public static void main(String arg[])
   {
-
+    String fname[]=new String[100];
     int ctrf=0;
     int parg=1;
     int fargs=1;
@@ -90,7 +99,13 @@ class OS extends Device
               if(ctrdev<=9)
                 {
                   System.out.println("Enter Device name:");
-                  devices[ctrdev].name=sc.nextLine();
+                  String dname=sc.nextLine();
+                  if(search(devices,dname)!=-1)
+                  {
+                    System.out.println("Select another device name");
+                    break;
+                  }
+                  devices[ctrdev].name=dname;
                   System.out.println("Enter Storage size of Device:");
                   devices[ctrdev].size=mobj.input();
                   ctrdev++;
@@ -208,6 +223,12 @@ class OS extends Device
             System.out.println();
               System.out.println("Enter File name:");
               String name=sc.nextLine();
+              if(search(fname, name)!=-1)
+              {
+                System.out.println("File name already exists");
+                break;
+              }
+              fname[ctrf]=name;
               System.out.println("Enter File size:");
               int size=mobj.input();
               for (int i=0;i<ctrdev;i++)
@@ -215,8 +236,8 @@ class OS extends Device
                 narr[i]=devices[i].name;
                 sarr[i]=devices[i].size;
               }
-              for(int i=0;i<ctrdev;i++)
-                System.out.println(sarr[i]);
+              //for(int i=0;i<ctrdev;i++)
+                //System.out.println(sarr[i]);
               String ans="";
               switch(fargs)
               {
@@ -285,6 +306,7 @@ class OS extends Device
                   devices[chd-1].fname[chf-1]=null;
                   devices[chd-1].fsize[chf-1]=0;
                   devices[chd-1].fctr--;
+                  
                   ctrf--;
 
                   System.out.println("File deleted succesfully");
