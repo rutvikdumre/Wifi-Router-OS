@@ -126,6 +126,7 @@ class OS extends Device
         }
         break;
         case 2:
+        int dev=1;
         String arr[]=new String[10];
         int arr1[]=new int[10];
         int ctr=0;
@@ -153,6 +154,11 @@ class OS extends Device
               devices[s].nbits+=mobj.input();
             }
           }
+          else{
+            System.out.println("[No Devices Connected]");
+            dev=0;
+            break;
+          }
         }
         for(int i=0;i<ctrdev;i++)
         {
@@ -163,6 +169,7 @@ class OS extends Device
               ctr++;
             }
         }
+        if(dev!=0)
         switch(parg)
         {
           case 1:
@@ -347,6 +354,8 @@ class OS extends Device
         case 5:
           f=false;
           break;
+        default:
+        System.out.println("Wrong Input");
       }
     }
   }
